@@ -1,0 +1,14 @@
+{
+  "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
+  "name": "my-app",
+  "main": "dist/server/index.mjs",
+  "compatibility_date": "2025-06-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "dist/client",
+    "binding": "ASSETS"
+  },
+  "observability": {
+    "enabled": true
+  }
+}

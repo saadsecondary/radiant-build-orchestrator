@@ -7,6 +7,9 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  // Force the Cloudflare Worker/Nitro output when building outside Lovable.
+  // Without this, external CI builds only create dist/* and Wrangler cannot find .output/server/index.mjs.
+  nitro: true,
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
